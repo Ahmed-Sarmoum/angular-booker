@@ -1,0 +1,11 @@
+<div class="container">
+  <h2>Add Bookmark</h2>
+  <mat-form-field appearance="outline">
+    <mat-label>Bookmark Name</mat-label>
+    <input type="text" matInput [formControl]="bookmarkName" required />
+    <mat-error *ngIf="bookmarkName.invalid">
+      {{ getBookmarkNameInvalid() }}
+    </mat-error>
+    <button mat-raised-button color="primary" (click)="createBookmark()">create</button>
+  </mat-form-field>
+</div>
